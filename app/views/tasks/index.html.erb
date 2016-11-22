@@ -16,7 +16,7 @@
     <h3><%= task.name %></h3>
   </div>
   <div class="task-actions">
-    <i class="fa fa-trash"></i>
+    <%= link_to icon(:trash), task_path(task), method: :delete %>
   </div>
 </div>
 <% end %>

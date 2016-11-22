@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:destroy, :update]
+
   def index
     @tasks = Task.all.order(done: :asc, created_at: :desc)
   end
@@ -8,9 +10,20 @@ class TasksController < ApplicationController
     redirect_to action: 'index'
   end
 
-  def update
-    Task.find(params[:id]).update! task_params
+  def destroy
+    @task.destroy!
     redirect_to action: 'index'
+  end
+
+  def update
+    @task.update! task_params
+    redirect_to action: 'index'
+  end
+
+  private
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 
   def task_params
