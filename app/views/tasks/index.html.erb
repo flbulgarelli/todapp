@@ -1,12 +1,17 @@
 <div class="task-input">
   <%= form_for Task.new do |f| %>
-    <%= f.text_field :name %>
-    <%= f.submit :create %>
+    <div class="input-group">
+      <%= f.text_field :name, class: 'form-control', placeholder: 'type task title here...' %>
+      <span class="input-group-btn">
+        <%= f.submit 'create task', class: 'btn btn-success' %>
+      </span>
+    </div>
   <% end %>
 </div>
 
+<class="list-group" div>
 <% @tasks.each do |task| %>
-<div class="task-card">
+<div class="task-card list-group-item">
   <div class="task-status">
     <%= form_for task do |f| %>
       <%= f.check_box :done %>
@@ -16,7 +21,8 @@
     <h3><%= task.name %></h3>
   </div>
   <div class="task-actions">
-    <%= link_to icon(:trash), task_path(task), method: :delete %>
+    <%= link_to icon(:trash), task_path(task), method: :delete, class: 'text-danger' %>
   </div>
 </div>
 <% end %>
+</div>

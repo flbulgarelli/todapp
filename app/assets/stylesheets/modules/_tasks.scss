@@ -1,8 +1,5 @@
 .task-input input {
   width: 100%;
-  border-color: $color-secondary;
-  border-width: 1px;
-  border-style: solid;
 }
 
 .task-input {
@@ -16,11 +13,7 @@
 .task-card {
   display: flex;
   align-items: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: $color-secondary;
   margin: 10px 5px;
-  border-radius: 5px;
   padding: 5px;
   & > * {
     margin: 0 5px;
