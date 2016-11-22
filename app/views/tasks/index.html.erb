@@ -1,8 +1,18 @@
 <div class="task-input">
   <%= form_for Task.new do |f| %>
     <%= f.text_field :name %>
+    <%= f.submit :create %>
   <% end %>
 </div>
+
+<script>
+$(document).on('turbolinks:load', function() {
+  $('.edit_task input[type=checkbox]').on('change', function(e) {
+    $(e.target).closest('form').submit();
+  });
+});
+
+</script>
 
 <% @tasks.each do |task| %>
 <div class="task-card">
