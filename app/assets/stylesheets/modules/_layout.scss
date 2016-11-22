@@ -1,0 +1,55 @@
+$color-background: #FBFBFB;
+$color-primary:    #32B27A;
+$color-secondary:  #2FCC86;
+
+body {
+  background-color: $color-background;
+  color: $color-primary;
+  font-family: 'Lato'
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 13px;
+  margin: 10px;
+  font-style: italic;
+}
+
+.task-input input {
+  width: 100%;
+  border-color: $color-secondary;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.task-input {
+ margin: 0 10px 0 5px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $color-secondary;
+  margin: 10px 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.task-description, .task-status {
+  margin: 5px 10px
+}
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  width: 20px; height: 20px;
+}
