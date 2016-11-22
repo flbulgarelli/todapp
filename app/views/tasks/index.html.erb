@@ -21,6 +21,11 @@ $(document).on('turbolinks:load', function() {
       <%= f.check_box :done %>
     <% end %>
   </div>
-  <div class="task-name"><h3><%= task.name %></h3></div>
+  <div class="task-name">
+    <h3><%= task.name %></h3>
+  </div>
+  <div class="task-actions">
+    <i class="fa fa-trash"></i>
+  </div>
 </div>
 <% end %>
