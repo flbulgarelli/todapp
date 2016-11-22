@@ -5,15 +5,6 @@
   <% end %>
 </div>
 
-<script>
-$(document).on('turbolinks:load', function() {
-  $('.edit_task input[type=checkbox]').on('change', function(e) {
-    $(e.target).closest('form').submit();
-  });
-});
-
-</script>
-
 <% @tasks.each do |task| %>
 <div class="task-card">
   <div class="task-status">
