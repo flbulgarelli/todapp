@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.2'
 #gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 4.7.0'
+
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
